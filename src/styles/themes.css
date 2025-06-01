@@ -1,0 +1,370 @@
+/* Simplified CSS Custom Properties for Dynamic Themes */
+
+/* Default theme (Neon Tokyo) */
+:root {
+  /* Primary colors */
+  --color-primary: 14, 165, 233;
+  --color-primary-light: 56, 189, 248;
+  --color-primary-dark: 3, 105, 161;
+  
+  /* Secondary colors */
+  --color-secondary: 196, 80, 231;
+  --color-secondary-light: 220, 115, 247;
+  --color-secondary-dark: 139, 34, 158;
+  
+  /* Accent colors */
+  --color-accent: 236, 72, 153;
+  --color-accent-light: 248, 113, 113;
+  --color-accent-dark: 190, 24, 93;
+  
+  /* Base colors */
+  --color-background: 15, 23, 42;
+  --color-foreground: 248, 250, 252;
+  --color-muted: 30, 41, 59;
+  --color-muted-foreground: 148, 163, 184;
+  --color-border: 51, 65, 85;
+  
+  /* Semantic colors */
+  --color-success: 34, 197, 94;
+  --color-warning: 245, 158, 11;
+  --color-error: 239, 68, 68;
+  --color-info: 14, 165, 233;
+  
+  /* Transition duration */
+  --theme-transition-duration: 300ms;
+}
+
+/* Theme overrides - dynamically applied by JavaScript */
+[data-theme="blade-runner"] {
+  --color-primary: 245, 158, 11;
+  --color-primary-light: 251, 191, 36;
+  --color-primary-dark: 180, 83, 9;
+  
+  --color-secondary: 239, 68, 68;
+  --color-secondary-light: 248, 113, 113;
+  --color-secondary-dark: 185, 28, 28;
+  
+  --color-accent: 6, 182, 212;
+  --color-accent-light: 34, 211, 238;
+  --color-accent-dark: 14, 116, 144;
+  
+  --color-background: 10, 10, 10;
+  --color-foreground: 255, 215, 0;
+  --color-muted: 26, 15, 10;
+  --color-muted-foreground: 161, 161, 170;
+  --color-border: 69, 26, 3;
+  
+  --color-info: 6, 182, 212;
+}
+
+[data-theme="forest-spirits"] {
+  --color-primary: 34, 197, 94;
+  --color-primary-light: 74, 222, 128;
+  --color-primary-dark: 21, 128, 61;
+  
+  --color-secondary: 139, 69, 19;
+  --color-secondary-light: 251, 146, 60;
+  --color-secondary-dark: 101, 44, 13;
+  
+  --color-accent: 132, 204, 22;
+  --color-accent-light: 163, 230, 53;
+  --color-accent-dark: 77, 124, 15;
+  
+  --color-background: 28, 44, 28;
+  --color-foreground: 240, 253, 244;
+  --color-muted: 47, 79, 47;
+  --color-muted-foreground: 156, 163, 175;
+  --color-border: 72, 99, 72;
+  
+  --color-info: 34, 197, 94;
+}
+
+[data-theme="starlight-cosmos"] {
+  --color-primary: 67, 79, 144;
+  --color-primary-light: 98, 113, 179;
+  --color-primary-dark: 41, 48, 89;
+  
+  --color-secondary: 135, 34, 178;
+  --color-secondary-light: 168, 79, 210;
+  --color-secondary-dark: 88, 22, 117;
+  
+  --color-accent: 245, 224, 117;
+  --color-accent-light: 250, 241, 185;
+  --color-accent-dark: 161, 147, 77;
+  
+  --color-background: 10, 12, 25;
+  --color-foreground: 245, 245, 250;
+  --color-muted: 38, 42, 63;
+  --color-muted-foreground: 156, 163, 175;
+  --color-border: 56, 61, 89;
+  
+  --color-info: 135, 34, 178;
+}
+
+[data-theme="vintage-paper"] {
+  --color-primary: 234, 159, 18;
+  --color-primary-light: 249, 203, 99;
+  --color-primary-dark: 167, 112, 13;
+  
+  --color-secondary: 228, 72, 20;
+  --color-secondary-light: 251, 159, 129;
+  --color-secondary-dark: 156, 49, 13;
+  
+  --color-accent: 20, 137, 103;
+  --color-accent-light: 60, 174, 140;
+  --color-accent-dark: 14, 88, 66;
+  
+  --color-background: 250, 241, 222;
+  --color-foreground: 45, 33, 21;
+  --color-muted: 232, 219, 201;
+  --color-muted-foreground: 126, 104, 86;
+  --color-border: 196, 174, 146;
+  
+  --color-success: 20, 137, 103;
+  --color-warning: 234, 159, 18;
+  --color-info: 20, 137, 103;
+}
+
+[data-theme="pure-minimal"] {
+  --color-primary: 70, 70, 70;
+  --color-primary-light: 110, 110, 110;
+  --color-primary-dark: 30, 30, 30;
+  
+  --color-secondary: 170, 170, 170;
+  --color-secondary-light: 210, 210, 210;
+  --color-secondary-dark: 140, 140, 140;
+  
+  --color-accent: 20, 20, 20;
+  --color-accent-light: 50, 50, 50;
+  --color-accent-dark: 10, 10, 10;
+  
+  --color-background: 255, 255, 255;
+  --color-foreground: 33, 33, 33;
+  --color-muted: 245, 245, 245;
+  --color-muted-foreground: 156, 156, 156;
+  --color-border: 230, 230, 230;
+  
+  --color-info: 70, 70, 70;
+}
+
+[data-theme="golden-luxury"] {
+  --color-primary: 234, 179, 0;
+  --color-primary-light: 246, 194, 85;
+  --color-primary-dark: 158, 121, 0;
+  
+  --color-secondary: 48, 48, 48;
+  --color-secondary-light: 81, 81, 81;
+  --color-secondary-dark: 20, 20, 20;
+  
+  --color-accent: 34, 197, 94;
+  --color-accent-light: 74, 222, 128;
+  --color-accent-dark: 21, 128, 61;
+  
+  --color-background: 10, 10, 10;
+  --color-foreground: 245, 245, 245;
+  --color-muted: 38, 38, 38;
+  --color-muted-foreground: 148, 148, 148;
+  --color-border: 64, 64, 64;
+  
+  --color-warning: 234, 179, 0;
+  --color-info: 234, 179, 0;
+}
+
+/* ==========================================
+   SMOOTH TRANSITIONS
+   ========================================== */
+
+.theme-transitioning {
+  transition: 
+    background-color var(--theme-transition-duration) ease-in-out,
+    color var(--theme-transition-duration) ease-in-out,
+    border-color var(--theme-transition-duration) ease-in-out;
+}
+
+.theme-transitioning *,
+.theme-transitioning *::before,
+.theme-transitioning *::after {
+  transition: 
+    background-color var(--theme-transition-duration) ease-in-out,
+    color var(--theme-transition-duration) ease-in-out,
+    border-color var(--theme-transition-duration) ease-in-out,
+    box-shadow var(--theme-transition-duration) ease-in-out,
+    fill var(--theme-transition-duration) ease-in-out,
+    stroke var(--theme-transition-duration) ease-in-out !important;
+}
+
+/* ==========================================
+   UTILITY CLASSES
+   ========================================== */
+
+/* Backgrounds */
+.bg-primary { background-color: rgb(var(--color-primary)); }
+.bg-primary-light { background-color: rgb(var(--color-primary-light)); }
+.bg-primary-dark { background-color: rgb(var(--color-primary-dark)); }
+.bg-secondary { background-color: rgb(var(--color-secondary)); }
+.bg-accent { background-color: rgb(var(--color-accent)); }
+
+/* Text colors */
+.text-primary { color: rgb(var(--color-primary)); }
+.text-secondary { color: rgb(var(--color-secondary)); }
+.text-accent { color: rgb(var(--color-accent)); }
+.text-muted { color: rgb(var(--color-muted-foreground)); }
+
+/* Borders */
+.border-primary { border-color: rgb(var(--color-primary)); }
+.border-secondary { border-color: rgb(var(--color-secondary)); }
+.border-accent { border-color: rgb(var(--color-accent)); }
+
+/* Effects */
+.glow-primary {
+  box-shadow: 0 0 20px rgb(var(--color-primary) / 0.3);
+}
+
+.glow-accent {
+  box-shadow: 0 0 20px rgb(var(--color-accent) / 0.3);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, 
+    rgb(var(--color-primary)), 
+    rgb(var(--color-primary-light)));
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, 
+    rgb(var(--color-accent)), 
+    rgb(var(--color-accent-light)));
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, 
+    rgb(var(--color-primary) / 0.8), 
+    rgb(var(--color-secondary) / 0.6),
+    rgb(var(--color-accent) / 0.8));
+}
+
+/* ==========================================
+   COMPONENT STYLES
+   ========================================== */
+
+/* Button variants */
+.btn-primary {
+  background: linear-gradient(135deg, 
+    rgb(var(--color-primary)), 
+    rgb(var(--color-primary-dark)));
+  color: rgb(var(--color-background));
+  border: none;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, 
+    rgb(var(--color-secondary)), 
+    rgb(var(--color-secondary-dark)));
+  color: rgb(var(--color-background));
+  border: none;
+}
+
+.btn-outline {
+  background: transparent;
+  color: rgb(var(--color-primary));
+  border: 2px solid rgb(var(--color-primary));
+}
+
+.btn-ghost {
+  background: rgb(var(--color-primary) / 0.1);
+  color: rgb(var(--color-primary));
+  border: none;
+}
+
+/* Card variants */
+.card {
+  background: rgb(var(--color-background));
+  border: 1px solid rgb(var(--color-border));
+  color: rgb(var(--color-foreground));
+}
+
+.card-muted {
+  background: rgb(var(--color-muted));
+  border: 1px solid rgb(var(--color-border));
+  color: rgb(var(--color-foreground));
+}
+
+.card-primary {
+  background: rgb(var(--color-primary) / 0.1);
+  border: 1px solid rgb(var(--color-primary) / 0.2);
+  color: rgb(var(--color-foreground));
+}
+
+/* Input fields */
+.input {
+  background: rgb(var(--color-background));
+  border: 1px solid rgb(var(--color-border));
+  color: rgb(var(--color-foreground));
+}
+
+.input:focus {
+  border-color: rgb(var(--color-primary));
+  box-shadow: 0 0 0 3px rgb(var(--color-primary) / 0.1);
+}
+
+.input::placeholder {
+  color: rgb(var(--color-muted-foreground));
+}
+
+/* Status colors */
+.text-success { color: rgb(var(--color-success)); }
+.text-warning { color: rgb(var(--color-warning)); }
+.text-error { color: rgb(var(--color-error)); }
+.text-info { color: rgb(var(--color-info)); }
+
+.bg-success { background-color: rgb(var(--color-success)); }
+.bg-warning { background-color: rgb(var(--color-warning)); }
+.bg-error { background-color: rgb(var(--color-error)); }
+.bg-info { background-color: rgb(var(--color-info)); }
+
+/* ==========================================
+   ACCESSIBILITY & SYSTEM PREFERENCES
+   ========================================== */
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .theme-transitioning,
+  .theme-transitioning * {
+    transition: none !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --color-border: var(--color-foreground);
+  }
+  
+  .btn-outline,
+  .card,
+  .input {
+    border-width: 2px;
+  }
+}
+
+/* Print styles */
+@media print {
+  :root {
+    --color-background: 255, 255, 255;
+    --color-foreground: 0, 0, 0;
+    --color-muted: 128, 128, 128;
+    --color-border: 128, 128, 128;
+    --color-primary: 0, 0, 0;
+    --color-secondary: 64, 64, 64;
+    --color-accent: 128, 128, 128;
+  }
+  
+  .glow-primary,
+  .glow-accent,
+  .gradient-primary,
+  .gradient-accent,
+  .gradient-hero {
+    background: none !important;
+    box-shadow: none !important;
+  }
+}

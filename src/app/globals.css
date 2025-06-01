@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Base font settings */
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+  
+  /* Default theme transition duration */
+  --theme-transition-duration: 200ms;
+  
+  /* Base colors */
+  --color-background: 255 255 255;       /* white */
+  --color-foreground: 23 23 23;          /* dark gray for text */
+  --color-muted: 241 241 241;            /* light gray for backgrounds */
+  --color-muted-foreground: 115 115 115; /* medium gray for secondary text */
+  --color-border: 229 229 229;           /* very light gray for borders */
+  
+  /* Primary colors - purple */
+  --color-primary: 138 43 226;         /* purple (matches your RevenueHero) */
+  --color-primary-light: 170 85 246;   /* lighter purple */
+  --color-primary-dark: 106 21 194;    /* darker purple */
+  
+  /* Secondary colors - blue */
+  --color-secondary: 59 130 246;       /* blue */
+  --color-secondary-light: 96 165 250; /* lighter blue */
+  --color-secondary-dark: 37 99 235;   /* darker blue */
+  
+  /* Accent colors - red */
+  --color-accent: 255 0 51;            /* red (matches your RevenueHero) */
+  --color-accent-light: 255 51 102;    /* lighter red */
+  --color-accent-dark: 204 0 41;       /* darker red */
+  
+  /* Semantic colors */
+  --color-success: 34 197 94;          /* green */
+  --color-warning: 245 158 11;         /* amber */
+  --color-error: 239 68 68;            /* red */
+  --color-info: 14 165 233;            /* sky blue */
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Transition styles for theme switching */
+.theme-transitioning,
+.theme-transitioning *,
+.theme-transitioning *::before,
+.theme-transitioning *::after {
+  transition: 
+    background-color var(--theme-transition-duration) ease-in-out,
+    color var(--theme-transition-duration) ease-in-out,
+    border-color var(--theme-transition-duration) ease-in-out,
+    fill var(--theme-transition-duration) ease-in-out,
+    stroke var(--theme-transition-duration) ease-in-out,
+    opacity var(--theme-transition-duration) ease-in-out,
+    box-shadow var(--theme-transition-duration) ease-in-out !important;
+}
+
+/* Custom animation classes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+/* Improve focus styles for better accessibility */
+*:focus-visible {
+  outline: 2px solid rgb(var(--color-primary));
+  outline-offset: 2px;
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-primary) / 0.6);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-primary) / 0.8);
+}
+
+/* Optional dark mode if you need it */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: 23 23 23;
+    --color-foreground: 255 255 255;
+    --color-muted: 38 38 38;
+    --color-muted-foreground: 163 163 163;
+    --color-border: 64 64 64;
+  }
+}
+
+
+
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+@keyframes dot-move {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.animate-dot-move {
+  animation: dot-move 3s linear infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Animation for the flow indicator */
+@keyframes flow-through {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
