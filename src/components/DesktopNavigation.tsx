@@ -3,14 +3,27 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+interface Section {
+  id: string;
+  label: string;
+}
+
+interface DesktopNavigationProps {
+  sections: Section[];
+  activeSection: string | null;
+  css: (value: string) => string;
+  cssAlpha: (value: string, alpha: number) => string;
+  scrollToSection: (id: string) => void;
+}
+
 export default function DesktopNavigation({ 
   sections, 
   activeSection, 
   css, 
   cssAlpha, 
   scrollToSection 
-}) {
-  const [hoveredSection, setHoveredSection] = useState(null);
+}: DesktopNavigationProps) {
+  const [hoveredSection, setHoveredSection] = useState<string | null>(null);
 
   return (
     <nav className="hidden lg:flex items-center justify-center flex-1 max-w-2xl mx-8">

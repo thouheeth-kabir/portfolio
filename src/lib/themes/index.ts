@@ -249,6 +249,7 @@ export const themes: Record<string, Theme> = {
 
 // Utility functions
 export type ThemeId = keyof typeof themes
+export type ThemeName = (typeof themes)[ThemeId]['name']
 export type ThemeCategory = Theme['category']
 
 export const getTheme = (id: ThemeId): Theme | null => themes[id] || null

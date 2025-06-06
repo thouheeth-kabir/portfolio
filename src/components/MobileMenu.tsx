@@ -2,6 +2,16 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 
+interface MobileMenuProps {
+  mobileMenuOpen: boolean;
+  toggleMobileMenu: () => void;
+  sections: Array<{ id: string; label: string }>;
+  activeSection: string | null;
+  scrollToSection: (sectionId: string) => void;
+  css: (key: string) => string;
+  cssAlpha: (key: string, alpha: number) => string;
+}
+
 export default function MobileMenu({ 
   mobileMenuOpen, 
   toggleMobileMenu, 
@@ -10,7 +20,7 @@ export default function MobileMenu({
   scrollToSection, 
   css, 
   cssAlpha 
-}) {
+}: MobileMenuProps) {
   return (
     <AnimatePresence>
       {mobileMenuOpen && (

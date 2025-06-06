@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-export default function ActionButtons({ css, cssAlpha, onThemeToggle, scrollToSection }) {
+export default function ActionButtons({ css, cssAlpha, onThemeToggle, scrollToSection }: { css: (value: string) => string, cssAlpha: (value: string, alpha: number) => string, onThemeToggle: () => void, scrollToSection: (section: string) => void }) {
   return (
     <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
       {/* Theme Toggle */}
@@ -41,7 +41,7 @@ export default function ActionButtons({ css, cssAlpha, onThemeToggle, scrollToSe
       
       {/* CTA Button */}
       <motion.button
-      onClick={() => scrollToSection('projects')}
+      
         className="relative px-6 py-2.5 rounded-full font-medium text-sm overflow-hidden group"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}

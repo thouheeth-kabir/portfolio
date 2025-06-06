@@ -2,6 +2,17 @@
 
 import { useState } from 'react';
 
+interface ThemeTogglerProps {
+  currentTheme: any;
+  themeName: string;
+  themeCategory: string;
+  nextTheme: () => void;
+  previousTheme: () => void;
+  randomTheme: () => void;
+  css: (color: any) => string;
+  cssAlpha: (color: any, alpha: number) => string;
+}
+
 export default function ThemeToggler({
   currentTheme,
   themeName,
@@ -11,7 +22,7 @@ export default function ThemeToggler({
   randomTheme,
   css,
   cssAlpha
-}) {
+}: ThemeTogglerProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   
   // Toggle expanded state

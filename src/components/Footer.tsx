@@ -1,12 +1,20 @@
 'use client'
 
+interface FooterProps {
+  css: (value: any) => string;
+  cssAlpha: (value: any, alpha: number) => string;
+  themeName: string;
+  themeCategory: string;
+  randomTheme: () => void;
+}
+
 export default function Footer({ 
   css, 
   cssAlpha, 
   themeName,
   themeCategory,
   randomTheme 
-}) {
+}: FooterProps) {
   // Social links
   const socialLinks = [
     { name: "Twitter", url: "#", icon: "twitter" },
@@ -40,7 +48,7 @@ export default function Footer({
   const year = new Date().getFullYear();
   
   // Function to render social icon
-  const renderIcon = (iconName) => {
+  const renderIcon = (iconName: any) => {
     switch (iconName) {
       case 'twitter':
         return (

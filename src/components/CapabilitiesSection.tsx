@@ -1,7 +1,7 @@
 'use client'
 
 // Capabilities Section - Will be expanded later
-export function CapabilitiesSection({ css, cssAlpha }) {
+export function CapabilitiesSection({ css, cssAlpha }: { css: (color: any) => any, cssAlpha: (color: any, alpha: any) => any }) {
   // Tech stack items
   const technologies = [
     { name: "React", icon: "react", description: "Frontend UI Library" },
@@ -165,7 +165,7 @@ export function CapabilitiesSection({ css, cssAlpha }) {
 }
 
 // Projects Section - Will be expanded later
-export function ProjectsSection({ css, cssAlpha }) {
+export function ProjectsSection({ css, cssAlpha }: { css: (color: string) => string, cssAlpha: (color: string, alpha: number) => string }) {
   // Sample projects
   const projects = [
     {
@@ -288,7 +288,7 @@ export function ProjectsSection({ css, cssAlpha }) {
 }
 
 // Contact Section - Will be expanded later
-export function ContactSection({ css, cssAlpha }) {
+export function ContactSection({ css, cssAlpha }: { css: (color: any) => any, cssAlpha: (color: any, alpha: any) => any }) {
   // Gradient background style
   const gradientStyle = {
     background: `linear-gradient(to bottom, ${cssAlpha('accent', 0.05)}, ${css('background')})`

@@ -2,7 +2,33 @@ import { useState, useEffect, useMemo } from 'react';
 import { Github, Linkedin, Twitter, Mail, ExternalLink } from 'lucide-react';
 
 // Enhanced TeamCard component with warm background, better animations and features
-export default function TeamCard({ member, css, cssAlpha }) {
+type SocialLinks = {
+  github?: string;
+  linkedin?: string;
+  twitter?: string;
+  email?: string;
+  [key: string]: string | undefined;
+};
+
+type TeamMember = {
+  name: string;
+  role: string;
+  avatar?: string;
+  description: string;
+  skills: string[];
+  social?: SocialLinks;
+  processRole?: string;
+  processDescription?: string;
+  phaseTitle?: string;
+};
+
+type TeamCardProps = {
+  member: TeamMember;
+  css: (key: string) => string;
+  cssAlpha: (key: string, alpha: number) => string;
+};
+
+export default function TeamCard({ member, css, cssAlpha }: TeamCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [animate, setAnimate] = useState(false);
@@ -22,7 +48,7 @@ export default function TeamCard({ member, css, cssAlpha }) {
   // Generate avatar colors based on name
   const avatarColors = useMemo(() => {
     // Hash the name to get consistent colors
-    const hash = member.name.split('').reduce((acc, char) => {
+    const hash = member.name.split('').reduce((acc: number, char: string) => {
       return char.charCodeAt(0) + ((acc << 5) - acc);
     }, 0);
     
@@ -37,9 +63,9 @@ export default function TeamCard({ member, css, cssAlpha }) {
   }, [member.name]);
 
   // Get icon component based on skill name
-  const getSkillIcon = (skill) => {
+  const getSkillIcon = (skill: string) => {
     // Map of skill names to icon components
-    const iconMap = {
+    const iconMap: Record<string, string> = {
       React: "⚛️",
       JavaScript: "𝗝𝗦",
       TypeScript: "𝗧𝗦",
@@ -60,7 +86,7 @@ export default function TeamCard({ member, css, cssAlpha }) {
   };
 
   // Get social media icon component
-  const getSocialIcon = (type) => {
+  const getSocialIcon = (type: any) => {
     switch(type) {
       case 'github': return <Github size={18} />;
       case 'linkedin': return <Linkedin size={18} />;
@@ -85,7 +111,7 @@ export default function TeamCard({ member, css, cssAlpha }) {
   };
   
   // Skill badge animation
-  const getSkillDelay = (index) => {
+  const getSkillDelay = (index: any) => {
     return {
       animationDelay: `${0.1 + (index * 0.1)}s`,
     };

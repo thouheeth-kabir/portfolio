@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-export default function Logo({ css }) {
+export default function Logo({ css }: { css: (key: string) => string }) {
   return (
     <motion.div 
       className="flex items-center flex-shrink-0"

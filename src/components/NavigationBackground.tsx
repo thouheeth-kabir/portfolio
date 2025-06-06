@@ -2,7 +2,12 @@
 
 import { motion } from 'framer-motion';
 
-export default function NavigationBackground({ isScrolled, cssAlpha }) {
+interface NavigationBackgroundProps {
+  isScrolled: boolean;
+  cssAlpha: (color: string, alpha: number) => string;
+}
+
+export default function NavigationBackground({ isScrolled, cssAlpha }: NavigationBackgroundProps) {
   return (
     <motion.div
       className="absolute inset-0"

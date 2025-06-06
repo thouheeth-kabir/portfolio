@@ -5,7 +5,8 @@ import { useThemeComplete } from '@/hooks/useTheme';
 import Navigation from '@/components/Navigation';
 import ThemeToggler from '@/components/ThemeToggler';
 import HeroSection from '@/components/sections/HeroSection';
-import { CapabilitiesSection, ProjectsSection, ContactSection } from '@/components/CapabilitiesSection';
+import { ProjectsSection} from '@/components/sections/ProjectSection';
+import { CapabilitiesSection, ContactSection } from '@/components/CapabilitiesSection';
 import Footer from '@/components/Footer';
 
 export default function PortfolioPage() {
@@ -209,7 +210,6 @@ export default function PortfolioPage() {
             backdropFilter: isScrolled ? 'blur(12px)' : 'none',
             WebkitBackdropFilter: isScrolled ? 'blur(12px)' : 'none',
             borderBottom: isScrolled ? `1px solid ${cssAlpha('border', 0.1)}` : 'none',
-            boxShadow: isScrolled ? `0 4px 6px -1px ${cssAlpha('shadow', 0.1)}` : 'none'
           }}
         >
           <div className="w-fully-2 py-2 h-16 px-4 md:px-6 lg:px-8 flex items-center justify-between">
@@ -221,6 +221,7 @@ export default function PortfolioPage() {
                 isScrolled={isScrolled}
                 css={css}
                 cssAlpha={cssAlpha}
+                onThemeToggle={randomTheme}
               />
             
             
@@ -321,8 +322,7 @@ export default function PortfolioPage() {
         href="#hero"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 px-4 py-2 rounded-md font-medium transition-colors"
         style={{
-          backgroundColor: css('accent'),
-          color: css('accent-foreground')
+          backgroundColor: css('accent')
         }}
       >
         Skip to content

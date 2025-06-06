@@ -7,6 +7,11 @@ export default function MobileMenuButton({
   toggleMobileMenu, 
   css, 
   cssAlpha 
+}: {
+  mobileMenuOpen: boolean;
+  toggleMobileMenu: () => void;
+  css: (key: string) => string;
+  cssAlpha: (key: string, alpha: number) => string;
 }) {
   return (
     <motion.button

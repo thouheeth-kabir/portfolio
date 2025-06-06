@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import ProcessFlow from './HowWeWork/ProcessFlow';
 
-export default function HowWeWork({ css, cssAlpha }) {
+export default function HowWeWork({ css, cssAlpha }: { css: (color: any) => string, cssAlpha: (color: any, opacity: number) => string }) {
   const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {

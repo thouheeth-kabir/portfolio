@@ -16,6 +16,13 @@ export default function Navigation({
   css,
   cssAlpha,
   onThemeToggle
+}: {
+  sections: any[];
+  activeSection: string;
+  isScrolled: boolean;
+  css: any;
+  cssAlpha: any;
+  onThemeToggle: () => void;
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
@@ -33,7 +40,7 @@ export default function Navigation({
   }, []);
   
   // Scroll to section
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: any) => {
     const element = document.getElementById(sectionId);
     if (element) {
       if (mobileMenuOpen) {

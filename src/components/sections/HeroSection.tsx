@@ -8,7 +8,7 @@ import StatsDisplay from './StatsDisplay';
 import { ArrowDown, Code, Zap, Globe } from 'lucide-react';
 
 // Hero Section component with enhanced UI and animations
-export default function HeroSection({ css, cssAlpha }) {
+export default function HeroSection({ css, cssAlpha }: { css: (color: any, opacity?: any) => any, cssAlpha: (color: any, opacity: number) => any }) {
   // Sample team data (reduced to 2 members)
   const teamMembers = [
     {
@@ -37,7 +37,8 @@ export default function HeroSection({ css, cssAlpha }) {
   const stats = [
     { label: "Years Experience", value: "25+", icon: <Zap size={20} /> },
     { label: "Projects Completed", value: "120+", icon: <Code size={20} /> },
-    { label: "Client Satisfaction", value: "98%", icon: <Globe size={20} /> }
+    { label: "Client Satisfaction", value: "98%", icon: <Globe size={20} /> },
+    { label: "Team Members", value: "2", icon: <Globe size={20} /> }
   ];
   
   // State for parallax effect
@@ -67,7 +68,7 @@ export default function HeroSection({ css, cssAlpha }) {
   );
   
   // Modern gradient background with subtle color shifts
-  const gradientStyle = {
+  const gradientStyle: React.CSSProperties = {
     background: `radial-gradient(circle at 30% 10%, ${cssAlpha('primary', 0.1)}, transparent 40%), 
                  radial-gradient(circle at 70% 90%, ${cssAlpha('secondary', 0.05)}, transparent 40%),
                  linear-gradient(to bottom, ${css('background')}, ${cssAlpha('primary', 0.03)})`,
