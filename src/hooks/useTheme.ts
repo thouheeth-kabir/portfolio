@@ -17,11 +17,12 @@ export function useThemeCSS() {
   }, [])
   
   // Get CSS custom property with alpha
-  const cssAlpha = useCallback((property: keyof ThemeColors, alpha: number): string => {
-    const clampedAlpha = Math.max(0, Math.min(1, alpha))
-    return `rgb(var(--color-${property}) / ${clampedAlpha})`
-  }, [])
+const cssAlpha = useCallback((property: keyof ThemeColors, alpha: number): string => {
+  const clampedAlpha = Math.max(0, Math.min(1, alpha))
   
+  // The correct syntax is rgba() with comma for alpha when using CSS variables
+  return `rgba(var(--color-${property}), ${clampedAlpha})`
+}, [])
   // Get raw RGB value
   const rgb = useCallback((property: keyof ThemeColors): string => {
     return currentTheme.colors[property]

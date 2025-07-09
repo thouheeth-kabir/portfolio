@@ -12,8 +12,8 @@ export default function HeroSection({ css, cssAlpha }: { css: (color: any, opaci
   // Sample team data (reduced to 2 members)
   const teamMembers = [
     {
-      name: "Alex Chen",
-      role: "Lead Developer",
+      name: "Kabir",
+      role: "Designer",
       description: "Full-stack developer with 8+ years of experience building scalable web applications.",
       skills: ["React", "Node.js", "AWS"],
       processRole: "Architecture Planning",
@@ -35,9 +35,9 @@ export default function HeroSection({ css, cssAlpha }: { css: (color: any, opaci
   
   // Team stats with improved data visualization
   const stats = [
-    { label: "Years Experience", value: "25+", icon: <Zap size={20} /> },
-    { label: "Projects Completed", value: "120+", icon: <Code size={20} /> },
-    { label: "Client Satisfaction", value: "98%", icon: <Globe size={20} /> },
+    { label: "Years Experience", value: "1+", icon: <Zap size={20} /> },
+    { label: "Projects Completed", value: "5+", icon: <Code size={20} /> },
+    { label: "Client Satisfaction", value: "100%", icon: <Globe size={20} /> },
     { label: "Team Members", value: "2", icon: <Globe size={20} /> }
   ];
   
@@ -79,7 +79,7 @@ export default function HeroSection({ css, cssAlpha }: { css: (color: any, opaci
   return (
     <section 
       id="hero" 
-      className="min-h-screen pt-24 pb-16 relative"
+      className="min-h-screen pt-24 relative"
       style={gradientStyle}
     >
       {/* Animated background particles */}
@@ -183,7 +183,7 @@ export default function HeroSection({ css, cssAlpha }: { css: (color: any, opaci
         </motion.div>
         
         {/* Team Members with flip cards and staggered animation */}
-        <motion.div 
+        {/* <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20"
           initial="hidden"
           whileInView="visible"
@@ -213,7 +213,7 @@ export default function HeroSection({ css, cssAlpha }: { css: (color: any, opaci
               />
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
         
         {/* Stats Display Component with animation */}
         <motion.div

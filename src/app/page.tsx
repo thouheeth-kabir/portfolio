@@ -267,7 +267,7 @@ export default function PortfolioPage() {
           {/* Capabilities Section */}
           <section 
             id="capabilities" 
-            className="relative py-20 lg:py-32"
+            className="relative py-20 lg:py-12"
           >
             <div className="container mx-auto">
               <CapabilitiesSection 

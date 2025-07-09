@@ -34,23 +34,23 @@ export interface Theme {
   colors: ThemeColors
 }
 
-// Simplified theme definitions - only essential colors
+// Simplified theme definitions with improved color values
 export const themes: Record<string, Theme> = {
   'neon-tokyo': {
     id: 'neon-tokyo',
     name: 'Neon Tokyo',
     category: 'cyberpunk',
     colors: {
-      primary: '14, 165, 233',        // Electric Blue
-      'primary-light': '56, 189, 248',
-      'primary-dark': '3, 105, 161',
+      primary: '20, 184, 235',        // Electric Blue
+      'primary-light': '65, 205, 248',
+      'primary-dark': '12, 120, 168',
       
       secondary: '196, 80, 231',      // Neon Purple
       'secondary-light': '220, 115, 247',
       'secondary-dark': '139, 34, 158',
       
       accent: '236, 72, 153',         // Hot Pink
-      'accent-light': '248, 113, 113',
+      'accent-light': '248, 113, 183',
       'accent-dark': '190, 24, 93',
       
       background: '15, 23, 42',       // Dark Slate
@@ -62,7 +62,7 @@ export const themes: Record<string, Theme> = {
       success: '34, 197, 94',
       warning: '245, 158, 11',
       error: '239, 68, 68',
-      info: '14, 165, 233',
+      info: '20, 184, 235',
     }
   },
 
@@ -83,10 +83,10 @@ export const themes: Record<string, Theme> = {
       'accent-light': '34, 211, 238',
       'accent-dark': '14, 116, 144',
       
-      background: '10, 10, 10',
-      foreground: '255, 215, 0',
-      muted: '26, 15, 10',
-      'muted-foreground': '161, 161, 170',
+      background: '18, 18, 23',       // Dark Background
+      foreground: '245, 232, 158',    // Soft Gold
+      muted: '32, 32, 40',
+      'muted-foreground': '170, 152, 120',
       border: '69, 26, 3',
       
       success: '34, 197, 94',
@@ -101,12 +101,12 @@ export const themes: Record<string, Theme> = {
     name: 'Forest Spirits',
     category: 'nature',
     colors: {
-      primary: '34, 197, 94',         // Forest Green
-      'primary-light': '74, 222, 128',
-      'primary-dark': '21, 128, 61',
+      primary: '42, 158, 88',         // Forest Green
+      'primary-light': '74, 187, 118',
+      'primary-dark': '26, 114, 62',
       
       secondary: '139, 69, 19',       // Earth Brown
-      'secondary-light': '251, 146, 60',
+      'secondary-light': '168, 104, 59',
       'secondary-dark': '101, 44, 13',
       
       accent: '132, 204, 22',         // Lime Green
@@ -116,13 +116,13 @@ export const themes: Record<string, Theme> = {
       background: '28, 44, 28',
       foreground: '240, 253, 244',
       muted: '47, 79, 47',
-      'muted-foreground': '156, 163, 175',
+      'muted-foreground': '176, 193, 175',
       border: '72, 99, 72',
       
-      success: '34, 197, 94',
-      warning: '245, 158, 11',
-      error: '220, 38, 38',
-      info: '34, 197, 94',
+      success: '42, 158, 88',
+      warning: '212, 162, 52',
+      error: '190, 58, 48',
+      info: '58, 152, 185',
     }
   },
 
@@ -131,17 +131,17 @@ export const themes: Record<string, Theme> = {
     name: 'Starlight Cosmos',
     category: 'cosmic',
     colors: {
-      primary: '67, 79, 144',         // Deep Space Blue
-      'primary-light': '98, 113, 179',
-      'primary-dark': '41, 48, 89',
+      primary: '78, 92, 162',         // Deep Space Blue
+      'primary-light': '115, 130, 205',
+      'primary-dark': '50, 60, 110',
       
       secondary: '135, 34, 178',      // Nebula Purple
       'secondary-light': '168, 79, 210',
       'secondary-dark': '88, 22, 117',
       
       accent: '245, 224, 117',        // Star Gold
-      'accent-light': '250, 241, 185',
-      'accent-dark': '161, 147, 77',
+      'accent-light': '250, 235, 162',
+      'accent-dark': '205, 184, 77',
       
       background: '10, 12, 25',
       foreground: '245, 245, 250',
@@ -149,10 +149,10 @@ export const themes: Record<string, Theme> = {
       'muted-foreground': '156, 163, 175',
       border: '56, 61, 89',
       
-      success: '34, 197, 94',
-      warning: '245, 158, 11',
-      error: '220, 38, 38',
-      info: '135, 34, 178',
+      success: '75, 185, 143',
+      warning: '240, 178, 85',
+      error: '220, 75, 110',
+      info: '78, 145, 220',
     }
   },
 
@@ -161,28 +161,28 @@ export const themes: Record<string, Theme> = {
     name: 'Vintage Paper',
     category: 'retro',
     colors: {
-      primary: '234, 159, 18',        // Mustard
-      'primary-light': '249, 203, 99',
-      'primary-dark': '167, 112, 13',
+      primary: '179, 124, 87',        // Sepia Brown
+      'primary-light': '204, 162, 132',
+      'primary-dark': '137, 88, 59',
       
-      secondary: '228, 72, 20',       // Burnt Orange
-      'secondary-light': '251, 159, 129',
-      'secondary-dark': '156, 49, 13',
+      secondary: '133, 77, 14',       // Leather Brown
+      'secondary-light': '173, 105, 30',
+      'secondary-dark': '92, 53, 9',
       
-      accent: '20, 137, 103',         // Vintage Teal
-      'accent-light': '60, 174, 140',
-      'accent-dark': '14, 88, 66',
+      accent: '24, 116, 105',         // Vintage Teal
+      'accent-light': '57, 147, 136',
+      'accent-dark': '16, 78, 70',
       
-      background: '250, 241, 222',
-      foreground: '45, 33, 21',
-      muted: '232, 219, 201',
-      'muted-foreground': '126, 104, 86',
-      border: '196, 174, 146',
+      background: '247, 240, 225',    // Aged Paper
+      foreground: '55, 42, 27',       // Dark Ink
+      muted: '235, 225, 205',         // Faded Paper
+      'muted-foreground': '120, 98, 77',
+      border: '210, 190, 160',
       
-      success: '20, 137, 103',
-      warning: '234, 159, 18',
-      error: '220, 38, 38',
-      info: '20, 137, 103',
+      success: '65, 135, 95',         // Muted Green
+      warning: '204, 140, 40',        // Amber
+      error: '168, 60, 50',           // Rust Red
+      info: '90, 112, 145',           // Faded Blue
     }
   },
 
@@ -191,28 +191,28 @@ export const themes: Record<string, Theme> = {
     name: 'Pure Minimal',
     category: 'minimal',
     colors: {
-      primary: '70, 70, 70',          // Dark Gray
-      'primary-light': '110, 110, 110',
-      'primary-dark': '30, 30, 30',
+      primary: '45, 45, 45',          // Dark Gray
+      'primary-light': '85, 85, 85',
+      'primary-dark': '25, 25, 25',
       
       secondary: '170, 170, 170',     // Light Gray
       'secondary-light': '210, 210, 210',
       'secondary-dark': '140, 140, 140',
       
-      accent: '20, 20, 20',           // Near Black
-      'accent-light': '50, 50, 50',
-      'accent-dark': '10, 10, 10',
+      accent: '0, 0, 0',              // Black
+      'accent-light': '40, 40, 40',
+      'accent-dark': '0, 0, 0',
       
       background: '255, 255, 255',
-      foreground: '33, 33, 33',
+      foreground: '28, 28, 28',
       muted: '245, 245, 245',
-      'muted-foreground': '156, 156, 156',
+      'muted-foreground': '128, 128, 128',
       border: '230, 230, 230',
       
-      success: '34, 197, 94',
-      warning: '245, 158, 11',
-      error: '239, 68, 68',
-      info: '70, 70, 70',
+      success: '40, 167, 94',
+      warning: '224, 142, 30',
+      error: '212, 45, 45',
+      info: '25, 113, 194',
     }
   },
 
@@ -221,28 +221,28 @@ export const themes: Record<string, Theme> = {
     name: 'Golden Luxury',
     category: 'luxury',
     colors: {
-      primary: '234, 179, 0',         // Royal Gold
-      'primary-light': '246, 194, 85',
-      'primary-dark': '158, 121, 0',
+      primary: '212, 175, 55',        // Royal Gold
+      'primary-light': '232, 198, 92',
+      'primary-dark': '175, 142, 33',
       
-      secondary: '48, 48, 48',        // Charcoal
-      'secondary-light': '81, 81, 81',
+      secondary: '40, 40, 40',        // Charcoal
+      'secondary-light': '70, 70, 70',
       'secondary-dark': '20, 20, 20',
       
-      accent: '34, 197, 94',          // Emerald
-      'accent-light': '74, 222, 128',
-      'accent-dark': '21, 128, 61',
+      accent: '16, 120, 80',          // Emerald
+      'accent-light': '35, 145, 102',
+      'accent-dark': '10, 90, 60',
       
-      background: '10, 10, 10',
+      background: '20, 20, 22',
       foreground: '245, 245, 245',
-      muted: '38, 38, 38',
-      'muted-foreground': '148, 148, 148',
+      muted: '38, 38, 40',
+      'muted-foreground': '158, 158, 158',
       border: '64, 64, 64',
       
-      success: '34, 197, 94',
-      warning: '234, 179, 0',
-      error: '239, 68, 68',
-      info: '234, 179, 0',
+      success: '34, 158, 94',
+      warning: '212, 175, 55',
+      error: '200, 48, 48',
+      info: '55, 130, 190',
     }
   }
 }

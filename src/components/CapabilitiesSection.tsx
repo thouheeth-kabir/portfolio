@@ -111,7 +111,7 @@ export function CapabilitiesSection({ css, cssAlpha }: { css: (color: any) => an
                 }}
               >
                 <div 
-                  className="w-12 h-12 mx-auto mb-3 rounded-lg flex items-center justify-center"
+                  className="w-12 h-12 mx-auto px-4 mb-3 rounded-lg flex items-center justify-center"
                   style={{ 
                     backgroundColor: cssAlpha('secondary', 0.1),
                     color: css('secondary')
@@ -119,7 +119,7 @@ export function CapabilitiesSection({ css, cssAlpha }: { css: (color: any) => an
                 >
                   {tech.icon}
                 </div>
-                <div className="font-medium">{tech.name}</div>
+                <div className="font-medium"  style={{ color: cssAlpha('foreground', 0.9) }}>{tech.name}</div>
                 <div 
                   className="text-xs"
                   style={{ color: cssAlpha('foreground', 0.7) }}
