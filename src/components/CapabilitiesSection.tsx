@@ -331,8 +331,10 @@ export function ContactSection({ css, cssAlpha }: { css: (color: any) => any, cs
           }}
         >
           {/* Form introduction */}
-          <div className="mb-8 text-center">
-            <p className="mb-4">
+          <div className="mb-8 text-center"
+                        style={{ color: cssAlpha('foreground', 0.9) }}
+          >
+            <p className="mb-4" >
               Interested in working with us? We'd love to hear about your project.
             </p>
             <p 

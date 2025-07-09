@@ -69,7 +69,8 @@ export default function ActionButtons({ css, cssAlpha, onThemeToggle, scrollToSe
         
         <span 
  className="relative z-10 flex items-center space-x-2">
-          <span>Get Started</span>
+          <button             onClick={() => scrollToSection("contact")}
+>Get Started</button>
           <motion.svg
             className="w-4 h-4"
             fill="none"
